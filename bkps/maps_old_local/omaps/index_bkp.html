@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>Chase ATM locator</title>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+<style type="text/css">
+#map_canvas{ 
+	border: 1px solid #999;
+	width:100%;
+	height:240px;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+ <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<!-- <script src="geolocation.js"></script> -->
+
+<script type="text/javascript">
+$(document).ready( function(){
+
+  map = new OpenLayers.Map("map_canvas");
+  map.addLayer(new OpenLayers.Layer.OSM());
+  var pois = new OpenLayers.Layer.Text( "My Points",{ location:"json/textfile.txt", projection: map.displayProjection});
+  map.addLayer(pois);
+   
+  //Set start centrepoint and zoom    
+  var lonLat = new OpenLayers.LonLat( -58.4055, -34.600)
+    .transform(new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+      map.getProjectionObject() // to Spherical Mercator Projection
+    );
+  var zoom=13;
+  map.setCenter (lonLat, zoom);
+
+});//document ready eof
+
+</script>	
+</head>
+
+<body>
+	<div data-role="page">		
+		<div data-role="header"><h1>Geo maps view</h1></div>
+		<div data-role="content"> 
+			<div id="map_canvas"> </div>
+		</div>
+		<div data-role="footer"><h6>JQM implementation demo</h6></div>
+	</div>
+</body>
+</html>
+
+
+
+

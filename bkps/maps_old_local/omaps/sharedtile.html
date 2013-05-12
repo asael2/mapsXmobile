@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>Chase ATM locator</title>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+<style type="text/css">
+#map_canvas{ 
+	border: 1px solid #999;
+	width:100%;
+	height:240px;
+}
+.smaller{ font-size:70%;}
+</style>
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!-- JQM -->
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<!-- Openlayers -->
+<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<!-- Google maps -->
+<script src="http://maps.google.com/maps/api/js?v=3.6&amp;sensor=false"></script>
+<script type="text/javascript">
+
+var map = null;
+var toSphericCoords = function(x, y) {
+	return new OpenLayers.LonLat(x,y).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()); 
+};
+
+var addMyMarker = function(coords){
+	var markers = new OpenLayers.Layer.Markers( "Markers" );
+	map.addLayer(markers);
+	var size = new OpenLayers.Size(21,25);
+	var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+	var icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
+	markers.addMarker(new OpenLayers.Marker(coords, icon));
+	//markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(x, y),icon.clone()));
+};
+
+/**
+ * @callback: navigator.geolocation.getCurrentPosition
+ */
+var onGotPosition = function(position){
+    var userCoordsInSpherics;
+    console.log(position, "Geoposition");
+    userCoordsInSpherics = toSphericCoords(position.coords.longitude, position.coords.latitude);
+    map.setCenter(userCoordsInSpherics, 15);
+    addMyMarker(userCoordsInSpherics);
+};
+
+/**
+ * @callback: navigator.geolocation.getCurrentPosition
+ */
+var onGotPositionError = function(){
+    console.warn("Error!!!");
+};
+
+//INIT
+$(document).ready( function(){
+
+	//map = new OpenLayers.Map("map_canvas");
+	//map.addLayer(new OpenLayers.Layer.OSM());	
+
+
+	//Set start centrepoint and zoom    
+	// var lonlat = toSphericCoords(10, 10);
+	// map.setCenter(lonlat, 5);
+
+map = new OpenLayers.Map({
+        div: "map_canvas",
+        allOverlays: true
+    });
+
+    var osm = new OpenLayers.Layer.OSM();
+    var gmap = new OpenLayers.Layer.Google("Google Streets", {visibility: false});
+
+    // note that first layer must be visible
+    map.addLayers([osm, gmap]);
+
+    map.addControl(new OpenLayers.Control.LayerSwitcher());
+    map.zoomToMaxExtent();
+
+
+
+
+
+	//add markers from txt file
+	var atms = new OpenLayers.Layer.Text( "Near ATM",{ location:"json/textfile.txt", projection: map.displayProjection});
+	map.addLayer(atms);
+
+	//Geolocate device
+    if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(onGotPosition, onGotPositionError);
+    } else {
+    	alert("Why rejected Geolocation?")
+    }
+          
+	
+
+});//document ready eof
+
+</script>	
+</head>
+
+<body>
+	<div data-role="page">		
+		<div data-role="header"><h1>OpenStreetMaps</h1></div>
+		<div data-role="content"> 
+			<div id="map_canvas"> </div>
+			
+			<h3>Open street maps, with Openlayes for jQuery Mobile</h3>
+			<p>OpenLayers makes it easy to put a dynamic map in any web page. It can display map tiles and markers loaded from any source. OpenLayers has been developed to further the use of geographic information of all kinds. OpenLayers is completely free, Open Source JavaScript, released under the 2-clause BSD License (also known as the FreeBSD).</p>
+			
+			<p class="smaller">The FreeBSD License. 
+			Redistribution and use in source and binary forms, with or without modification,
+			are permitted provided that the following conditions are met:
+
+			 1. Redistributions of source code must retain the above copyright notice, this
+			list of conditions and the following disclaimer.
+
+			 2. Redistributions in binary form must reproduce the above copyright notice,
+			this list of conditions and the following disclaimer in the documentation and/or
+			other materials provided with the distribution.
+
+			THIS SOFTWARE IS PROVIDED BY OPENLAYERS CONTRIBUTORS ``AS IS'' AND ANY EXPRESS
+			OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+			MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+			SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+			INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+			LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+			PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+			LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+			OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+			ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+			The views and conclusions contained in the software and documentation are those
+			of the authors and should not be interpreted as representing official policies,
+			either expressed or implied, of OpenLayers Contributors.</p>
+		</div>
+		<div data-role="footer"><h6>Openlayers JQM implementation demo</h6></div>
+	</div>
+</body>
+</html>
+
+
+
+

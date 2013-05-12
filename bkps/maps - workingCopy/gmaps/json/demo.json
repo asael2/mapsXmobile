@@ -1,0 +1,23 @@
+{"markers":[
+	{ 
+		"latitude":-34.597443, 
+		"longitude":-58.373666, 
+		"address":"2112 18th St.", 
+		"distance":"0.2miles SSE",
+		"phone":"(415) 156-4597" 
+	},
+	{ 
+		"latitude":-34.59656, 
+		"longitude":-58.370855, 
+		"address":"1182 10th St.", 
+		"distance":"1.1miles SSE",
+		"phone":"(415) 456-4598" 
+	},
+	{ 
+		"latitude":-34.596, 
+		"longitude":-58.370, 
+		"address":"1252 5th St.", 
+		"distance":"0.9miles NE",
+		"phone":"(415) 256-4599" 
+	}
+]}

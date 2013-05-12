@@ -1,0 +1,5 @@
+{"markers":[
+	{ "latitude":-34.597443, "longitude":-58.373666, "title":"Restaurant", "content":"Chino buena comila", "info":"<div class='contentInfoWindow'> </div>" },
+	{ "latitude":-34.59656, "longitude":-58.370855, "title":"Parking cars", "class":"infoventana", "content":"Back building face" },
+	{ "latitude":-34.596, "longitude":-58.370, "title":"Parking motos", "class":"infoventana", "content":"Moto parking" }
+]}

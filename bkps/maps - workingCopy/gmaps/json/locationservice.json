@@ -1,0 +1,630 @@
+{
+   "errors":[
+
+   ],
+   "locations":[
+      {
+         "access":"",
+         "lat":"37.322991",
+         "distance":0.64,
+         "address":"20573 Stevens Creek Blvd.",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Cupertino - Stevens Creek",
+         "state":"CA",
+         "zip":"95014",
+         "lng":"-122.034495",
+         "name":"Cupertino - Stevens Creek",
+         "city":"Cupertino",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.31922",
+         "distance":0.86,
+         "address":"10250 S. De Anza Blvd.",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Cupertino - De Anza Blvd.",
+         "state":"CA",
+         "zip":"95014",
+         "lng":"-122.031689",
+         "name":"Cupertino - De Anza Blvd.",
+         "city":"Cupertino",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.35651",
+         "distance":1.87,
+         "address":"791 El Camino Real",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Sunnyvale - Hacienda Center",
+         "state":"CA",
+         "zip":"94087",
+         "lng":"-122.01721",
+         "name":"Sunnyvale - Hacienda Center",
+         "city":"Sunnyvale",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.321999",
+         "distance":2.15,
+         "address":"5142 Stevens Creek Blvd.",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - Lawrence",
+         "state":"CA",
+         "zip":"95129",
+         "lng":"-121.99356",
+         "name":"San Jose - Lawrence",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.292479",
+         "distance":2.71,
+         "address":"12200 Saratoga-Sunnyvale Road",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Saratoga",
+         "state":"CA",
+         "zip":"95070",
+         "lng":"-122.032174",
+         "name":"Saratoga",
+         "city":"Saratoga",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Drive Up",
+         "lat":"37.373102",
+         "distance":2.87,
+         "address":"410 S. Mathilda Avenue",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Sunnyvale - Mathilda",
+         "state":"CA",
+         "zip":"94086",
+         "lng":"-122.035116",
+         "name":"Sunnyvale - Mathilda",
+         "city":"Sunnyvale",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.373608",
+         "distance":3.25,
+         "address":"1234 W. El Camino Real",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Sunnyvale - Bernardo",
+         "state":"CA",
+         "zip":"94087",
+         "lng":"-122.057704",
+         "name":"Sunnyvale - Bernardo",
+         "city":"Sunnyvale",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.291219",
+         "distance":3.49,
+         "address":"1725 Saratoga Avenue",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - Westgate",
+         "state":"CA",
+         "zip":"95129",
+         "lng":"-121.992638",
+         "name":"San Jose - Westgate",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.351962",
+         "distance":4.02,
+         "address":"2200 El Camino Real",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Santa Clara - El Camino Real",
+         "state":"CA",
+         "zip":"95050",
+         "lng":"-121.962157",
+         "name":"Santa Clara - El Camino Real",
+         "city":"Santa Clara",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.323507",
+         "distance":4.65,
+         "address":"2915 Stevens Creek Blvd.",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Santa Clara - Valley Fair",
+         "state":"CA",
+         "zip":"95050",
+         "lng":"-121.946666",
+         "name":"Santa Clara - Valley Fair",
+         "city":"Santa Clara",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.385268",
+         "distance":4.71,
+         "address":"749 W. El Camino Real",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Mountain View",
+         "state":"CA",
+         "zip":"94040",
+         "lng":"-122.083673",
+         "name":"Mountain View",
+         "city":"Mountain View",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.293734",
+         "distance":5.15,
+         "address":"1605 S. Winchester Blvd.",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Campbell - Winchester",
+         "state":"CA",
+         "zip":"95008",
+         "lng":"-121.95011",
+         "name":"Campbell - Winchester",
+         "city":"Campbell",
+         "services":[
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.378622",
+         "distance":5.67,
+         "address":"199 Main Street",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Los Altos",
+         "state":"CA",
+         "zip":"94022",
+         "lng":"-122.115322",
+         "name":"Los Altos",
+         "city":"Los Altos",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.287591",
+         "distance":6.15,
+         "address":"1875 S. Basom Ave., Suite 114",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Campbell - Pruneyard",
+         "state":"CA",
+         "zip":"95008",
+         "lng":"-121.933581",
+         "name":"Campbell - Pruneyard",
+         "city":"Campbell",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.400818",
+         "distance":6.5,
+         "address":"2510 W. El Camino, Suite 1",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Mountain View - San Antonio",
+         "state":"CA",
+         "zip":"94040",
+         "lng":"-122.111142",
+         "name":"Mountain View - San Antonio",
+         "city":"Mountain View",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.339",
+         "distance":6.69,
+         "address":"595 Coleman Avenue, Suite 100",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - Coleman",
+         "state":"CA",
+         "zip":"95110",
+         "lng":"-121.909326",
+         "name":"San Jose - Coleman",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.397892",
+         "distance":7.43,
+         "address":"690 River Oaks Parkway, Suite A",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - River Oaks",
+         "state":"CA",
+         "zip":"95134",
+         "lng":"-121.924157",
+         "name":"San Jose - River Oaks",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.24033",
+         "distance":7.46,
+         "address":"15698 Los Gatos Blvd.",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Los Gatos - Los Gatos Blvd.",
+         "state":"CA",
+         "zip":"95032",
+         "lng":"-121.958431",
+         "name":"Los Gatos - Los Gatos Blvd.",
+         "city":"Los Gatos",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.303471",
+         "distance":7.6,
+         "address":"1402 Lincoln Avenue",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - Willow Glen",
+         "state":"CA",
+         "zip":"95125",
+         "lng":"-121.897044",
+         "name":"San Jose - Willow Glen",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.228936",
+         "distance":7.62,
+         "address":"400 N. Santa Cruz Avenue",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Los Gatos - North Santa Cruz Avenue",
+         "state":"CA",
+         "zip":"95030",
+         "lng":"-121.980513",
+         "name":"Los Gatos - North Santa Cruz Avenue",
+         "city":"Los Gatos",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.335655",
+         "distance":7.65,
+         "address":"55 W. Santa Clara Street",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose Downtown",
+         "state":"CA",
+         "zip":"95113",
+         "lng":"-121.891589",
+         "name":"San Jose Downtown",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Drive Up",
+         "lat":"37.261149",
+         "distance":7.72,
+         "address":"1866 Camden Avenue",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - Camden",
+         "state":"CA",
+         "zip":"95124",
+         "lng":"-121.921909",
+         "name":"San Jose - Camden",
+         "city":"San Jose",
+         "services":[
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.338245",
+         "distance":8.33,
+         "address":"129 South 10th Street",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"OFF-SITE/San Jose State University",
+         "state":"CA",
+         "zip":"95192",
+         "lng":"-121.879265",
+         "name":"OFF-SITE/San Jose State University",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"",
+         "lat":"37.43221",
+         "distance":8.76,
+         "address":"2846 Middlefield Road",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"Palo Alto - Midtown",
+         "state":"CA",
+         "zip":"94306",
+         "lng":"-122.128113",
+         "name":"Palo Alto - Midtown",
+         "city":"Palo Alto",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      },
+      {
+         "access":"Vestibul",
+         "lat":"37.303717",
+         "distance":9.47,
+         "address":"2199 Monterey Highway, Suite 30",
+         "languages":[
+            "S",
+            "R",
+            "C",
+            "E"
+         ],
+         "locType":"atm",
+         "bank":"WaMu",
+         "label":"San Jose - The Plant",
+         "state":"CA",
+         "zip":"95125",
+         "lng":"-121.861929",
+         "name":"San Jose - The Plant",
+         "city":"San Jose",
+         "services":[
+            "Audio-assisted ATM",
+            "Deposit ATM",
+            "Open 24 hours"
+         ]
+      }
+   ]
+}

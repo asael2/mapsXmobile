@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>mSWAT ATM finder</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<style type="text/css">
+	#map_canvas{border: 1px solid #999; width:100%;	height:240px;}
+	.smaller{ font-size:70%;}
+	.infobox{padding:4px;font-size:0.9em;}
+</style>
+<!-- Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="libs/jquery.ui.map.js"></script>
+<script src="libs/ui/jquery.ui.map.extensions.js"></script>
+<script src="libs/ui/jquery.ui.map.overlays.js"></script>
+
+<script type="text/javascript">
+$(document).ready( function(){
+
+	//Map DOM element
+	var elMap = $('#map_canvas');
+		
+	var Map = {
+		clientPositionIcon : 'img/bluedot.png',
+		nearAtmIcon : 'img/Map-Marker-Ball-pink-icon.png',
+		atmIcon : 'img/Map-Marker-Ball-green-icon.png',	
+		//Init
+		init : function(){
+			elMap.gmap().bind('init', function(evt, map) {
+				Map.geolocate();	
+			});//map init eof
+		},
+		// ZIP search as fallback option
+		zipSearch : function(){
+			$("#map_canvas, .infobox").hide();
+			$("#zipFinder").show();
+			elMap.gmap('destroy');
+		},	
+		//Geolocate
+		geolocate : function(){elMap.gmap('getCurrentPosition', function(position, status) {
+			//If geolocation success. Engine compat. TODO
+			if ( status === 'OK' ) {
+				//reset map type
+				elMap.gmap('get','map').setMapTypeId(google.maps.MapTypeId.ROADMAP);
+				//service load here TODO
+				clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				//add client's position
+				elMap.gmap('addMarker', {'position': clientPosition, 'bounds': true, 'icon': Map.clientPositionIcon});
+				//Set ATM Markers
+				Map.setMarkers();
+				//show Map
+				elMap.show();
+			}
+			//If geolocation fails
+			else{ 	
+				Map.zipSearch();
+			}
+			});
+		},
+		// ATM service load TODO
+		setMarkers : function(){
+			nearAtm = function(atm){
+				elMap.gmap('addMarker', { 
+						'position': new google.maps.LatLng(atm.latitude, atm.longitude), 
+						'bounds': true,
+						'icon': Map.nearAtmIcon,
+						'animation': google.maps.Animation.DROP
+					}).click(function(){
+						var currentIcon = this;
+						Map.infoBox(atm);
+						Map.bounce(currentIcon);
+					});
+			};
+			othersAtm = function(atm){
+				elMap.gmap('addMarker', { 
+						'position': new google.maps.LatLng(atm.latitude, atm.longitude), 
+						'bounds': true,
+						'icon': Map.atmIcon,
+						'animation': google.maps.Animation.DROP
+					}).click(function(){
+						var currentIcon = this;
+						Map.infoBox(atm);
+						Map.bounce(currentIcon);
+					});
+			};			
+			//service implementation here TODO
+			$.getJSON( 'json/demo.json', function(data) {
+				nearAtm(data.markers[0]);	
+				for (var i=1; i<data.markers.length; i++){
+					othersAtm(data.markers[i]);
+				};
+			});						
+		},	
+		// Update infobox
+		infoBox : function (atm){
+			//print template here TODO
+			$(".data1",".infobox").text(atm.address);
+			$(".data2",".infobox").text(atm.distance);
+			$(".data3",".infobox").text(atm.phone);		
+		},	
+		// Marker bounce
+		bounce : function(currentIcon) {
+			currentIcon.setAnimation(null);
+	    	if (currentIcon.getAnimation() != null) {
+	      		currentIcon.setAnimation(null);
+	    	} else {
+	      		currentIcon.setAnimation(google.maps.Animation.BOUNCE);
+	    		setTimeout(function(){ currentIcon.setAnimation(null); }, 900);
+			}
+		},		
+	};//Map eof
+
+	/*Map page init binding*/
+	$("#mapPage").bind('pageinit', function(){
+		$("#zipFinder").hide();
+		//elMap.hide();
+	});//page init eof
+
+	/*Map page show binding*/
+	$("#mapPage").bind('pageshow', function(){
+		Map.init();
+	});//page show eof
+	
+});//document ready eof
+</script>
+</head>
+<body>
+
+<!-- Main page -->
+	<div data-role="page">
+		
+		<div data-role="header">
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>ATM locator</h1></div>
+		
+		<div data-role="content"> 
+			<a href="#mapPage" data-rel="dialog">Find ATM link</a>
+		</div>
+
+		<div data-role="footer">
+			<h6>Show a list of ATMs near to location</h6>
+		</div>
+	</div>
+
+<!-- Map page -->
+	<div data-role="page" id="mapPage">
+		<div data-role="header"><h1>Find ATM</h1></div>
+		<div data-role="content"> 
+			<!-- Infobox -->
+			<div class="infobox">
+			<span class="data1"></span><br>
+			<span class="data2"></span><br>
+			<span class="data3"></span>
+			</div>
+			<!-- Map canvas -->
+			<div id="map_canvas"> </div>
+			<!-- Zip search -->
+			<div id="zipFinder"> 
+				<p>Enter a zip code:</p>  
+				<input type="text" />
+				<button type="button">Find</button>
+				<small>*to restore Geolocalization, please reset your device options</small>
+			</div>
+		</div>
+
+		<div data-role="footer"><h6>Maps in JQM implementation demo</h6></div>	
+	</div>
+
+</body>
+</html>

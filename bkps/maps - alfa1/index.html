@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>mSWAT Maps</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<!-- Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+<body>
+	<div data-role="page">		
+		<div data-role="header"><h1>mSWAT Maps</h1></div>	
+		<div data-role="content"> 
+			<ul data-role="listview">
+				<li data-role="list-divider">Google Maps</li>
+				<li><a href="gmaps/index.html" data-ajax="false">ATM finder</a></li>
+				<li data-role="list-divider">OpenStreetMap</li>
+				<li><a href="omaps/index.html" data-ajax="false">OSM with OpenLayers</a></li>
+				<li><a href="omaps/googleLayers.html" data-ajax="false">OpenLayers with Google layers</a></li>
+				<li><a href="omaps/customMap.html" data-ajax="false">OpenLayers with MapBox</a></li>
+			</ul>
+			<br>
+			<p>Related info can be found on <a href="https://confluence.uk.jpmorgan.com/confluence/display/sig/mSwat+Research+-+Embedded+maps">the wiki.</a></p>	
+		</div>
+		<div data-role="footer"><h6>proofs of concept</h6></div>
+	</div>
+</body>
+</html>

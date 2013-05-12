@@ -1,0 +1,4 @@
+lat	lon	title	description	icon	iconSize	iconOffset
+
+-34.59075	-58.3702	Title One	Description one<br>Second line.<br><br>(click again to close)	img/ppal-icon.gif	18,18	2,-2
+-34.59875	-58.37552	Title Two	Description two.	img/ppal-icon.gif	18,18	-8,-8
